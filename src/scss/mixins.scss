@@ -1,7 +1,6 @@
 @mixin responsiveRowHeight($prop: height) {
   #{$prop}: 50px;
 
-  // TEST
   //@media screen and (min-width: 700px) {
   //  #{$prop}: 75px;
   //}
