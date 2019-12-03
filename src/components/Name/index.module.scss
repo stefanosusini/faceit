@@ -1,0 +1,19 @@
+@import "scss/mixins";
+
+.container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 0.8rem 0 1rem;
+  flex-grow: 1;
+  @include responsiveRowHeight();
+}
+
+.text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.2em;
+  letter-spacing: 0.5px;
+  margin: 0;
+}

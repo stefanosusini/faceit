@@ -1,0 +1,26 @@
+@import "scss/mixins";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 0 0.75em;
+  box-shadow: inset 0 0 1px 0 white;
+  flex-shrink: 0;
+  @include responsiveRowHeight();
+}
+
+.values {
+  font-size: 0.9em;
+  letter-spacing: 0.8px;
+  margin-bottom: 0.15em;
+}
+
+.label {
+  font-size: 0.7em;
+  letter-spacing: 1px;
+  color: #cccccc;
+}
+

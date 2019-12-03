@@ -1,0 +1,56 @@
+@import "scss/mixins";
+
+.container {
+  position: relative;
+}
+
+.schedule {
+  list-style: none;
+  padding: 0.5em 0.75em;
+  background: #111;
+  border-radius: 5px;
+  color: #fff;
+  margin: 0 0.45em;
+
+}
+
+.main {
+  display: flex;
+  color: #fff;
+  background-color: #111;
+  text-decoration: none;
+  min-width: 300px;
+
+  &:hover {
+    background-color: #222;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: hidden;
+
+  @media screen and (min-width: 600px) {
+    flex-direction: row;
+  }
+}
+
+.details {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.calendarIcon {
+  width: 20px;
+}
+
+.avatar {
+  @include responsiveRowHeight();
+  @include responsiveRowHeight(width);
+}
+
+.detail {
+  min-width: 60px;
+}

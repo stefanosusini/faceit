@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  // `object-fit` is supported by the majority of the browsers (https://caniuse.com/#search=object-fit)
+  // I assume in a real case we'd check which browsers we are supposed to support.
+  object-fit: cover;
+}
