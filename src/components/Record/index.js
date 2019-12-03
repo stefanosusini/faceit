@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 import dayjs from 'dayjs';
 
@@ -72,6 +73,20 @@ export const Record = ({ championship = {}, loading }) => {
              visible={showSchedule} />
     </div>
   );
+};
+
+Record.propTypes = {
+  championship: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    avatarUrl: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    skillLevelMin: PropTypes.number.isRequired,
+    skillLevelMax: PropTypes.number.isRequired,
+    slotsTotal: PropTypes.number.isRequired,
+    slotsTaken: PropTypes.number.isRequired,
+    schedule: PropTypes.arrayOf(PropTypes.instanceOf(Date)).isRequired,
+  }),
+  loading: PropTypes.bool,
 };
 
 export default Record;

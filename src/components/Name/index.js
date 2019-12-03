@@ -1,4 +1,5 @@
 import React, { memo } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import utilsStyles from '../../scss/utils.module.scss';
@@ -21,5 +22,14 @@ let Name = ({ className, name, loading }) => {
 };
 
 Name = memo(Name);
+
+Name.propTypes = {
+  className: PropTypes.string,
+  name: PropTypes.string,
+  loading: PropTypes.bool,
+};
+Name.defaultProps = {
+  loading: false,
+};
 
 export default Name;

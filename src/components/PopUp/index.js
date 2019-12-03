@@ -1,4 +1,5 @@
-import React, { memo } from 'react';
+import React  from 'react';
+import PropTypes from 'prop-types';
 import { CSSTransition } from 'react-transition-group';
 
 import styles from "./index.module.scss";
@@ -13,7 +14,7 @@ const popUpClassNames = {
 
 // This component is not complete. In a real prod environment it would
 // include a lot more configuration logic.
-let PopUp = ({ renderChildren, visible }) => {
+const PopUp = ({ renderChildren, visible }) => {
   return (
     <CSSTransition in={visible} timeout={300} classNames={popUpClassNames}>
       <div className={styles.container}>
@@ -23,6 +24,9 @@ let PopUp = ({ renderChildren, visible }) => {
   );
 };
 
-PopUp = memo(PopUp);
+PopUp.propTypes = {
+  renderChildren: PropTypes.func.isRequired,
+  visible: PropTypes.bool,
+};
 
 export default PopUp;

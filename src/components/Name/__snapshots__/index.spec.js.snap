@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Name component if className is provided if loading should render the class names in the correct order 1`] = `
+<div
+  className="container placeholderBackground CLASSNAME"
+>
+  <p
+    className="text placeholderBackground"
+  />
+</div>
+`;
+
+exports[`Name component if className is provided should render the component with the class name 1`] = `
+<div
+  className="container CLASSNAME"
+>
+  <p
+    className="text"
+  >
+    NAME
+  </p>
+</div>
+`;
+
+exports[`Name component if loading should render the loading state 1`] = `
+<div
+  className="container placeholderBackground"
+>
+  <p
+    className="text placeholderBackground"
+  />
+</div>
+`;
+
+exports[`Name component should render 1`] = `
+<div
+  className="container"
+>
+  <p
+    className="text"
+  >
+    NAME
+  </p>
+</div>
+`;

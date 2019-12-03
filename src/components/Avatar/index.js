@@ -1,4 +1,5 @@
 import React, { memo } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import { useImageLoading } from "utils/useImageLoading";
@@ -25,5 +26,12 @@ let Avatar = ({ className, loading, name, url }) => {
 };
 
 Avatar = memo(Avatar);
+
+Avatar.propTypes = {
+  className: PropTypes.string,
+  loading: PropTypes.bool,
+  name: PropTypes.string,
+  url: PropTypes.string,
+};
 
 export default Avatar;

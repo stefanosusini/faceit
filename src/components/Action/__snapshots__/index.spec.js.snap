@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Action component if className is provided should render with the class name 1`] = `
+<button
+  className="container CLASSNAME"
+  onClick={[Function]}
+>
+  Action
+</button>
+`;
+
+exports[`Action component should render 1`] = `
+<button
+  className="container"
+  onClick={[Function]}
+>
+  Action
+</button>
+`;

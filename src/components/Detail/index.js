@@ -1,4 +1,5 @@
 import React, { memo } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import utilsStyles from '../../scss/utils.module.scss';
@@ -21,5 +22,13 @@ let Detail = ({ className, delimiter = '/', loading, label, values }) => {
 };
 
 Detail = memo(Detail);
+
+Detail.propTypes = {
+  className: PropTypes.string,
+  delimiter: PropTypes.node,
+  loading: PropTypes.bool,
+  label: PropTypes.node,
+  values: PropTypes.arrayOf(PropTypes.node),
+};
 
 export default Detail;

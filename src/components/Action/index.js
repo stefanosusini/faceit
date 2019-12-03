@@ -1,4 +1,5 @@
 import React, { memo } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import styles from './index.module.scss';
@@ -6,7 +7,7 @@ import styles from './index.module.scss';
 let Action = ({ className, label, disabled, onClick }) => {
   const handleClick = (evt) => {
     evt.preventDefault();
-    if (onClick) onClick(evt);
+    if (onClick && !disabled) onClick(evt);
   };
 
   return (
@@ -19,5 +20,12 @@ let Action = ({ className, label, disabled, onClick }) => {
 };
 
 Action = memo(Action);
+
+Action.propTypes = {
+  className: PropTypes.string,
+  label: PropTypes.node,
+  disabled: PropTypes.bool,
+  onClick: PropTypes.func.isRequired,
+};
 
 export default Action;
