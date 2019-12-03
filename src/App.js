@@ -8,7 +8,7 @@ function App() {
   const [championship, loading, fetchChamp] = useFetchChampionship();
 
   return (
-    <div style={{ maxWidth: 900, margin: 'auto' }}>
+    <div style={{ maxWidth: 1400, margin: 'auto' }}>
       <Record championship={championship} loading={loading} />
       <p><button disabled={loading} onClick={fetchChamp}>Refresh</button></p>
     </div>
