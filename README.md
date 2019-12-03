@@ -27,4 +27,4 @@ I worked on this project while travelling to Italy. Due to the limited amount of
   - Use of Sass (Scss)
   - Modules aliases (to import components through their path relative to the `src` folder)
 - I've modified the provided `fetchChampionship` function to simulate some delay in the data fetching,
-- 
+- Any question please do no hesitate to ask :)
